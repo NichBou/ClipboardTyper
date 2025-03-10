@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea with No Pasting</title>
+    <style>
+        textarea {
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Textarea with No Pasting</h1>
+    <textarea id="noPasteTextarea" placeholder="Type here..."></textarea>
+
+    <script>
+        document.getElementById('noPasteTextarea').addEventListener('paste', function(e) {
+            e.preventDefault(); // Prevent the paste action
+            alert('Pasting is not allowed in this textarea.'); // Optional: Show an alert
+        });
+    </script>
+
+</body>
+</html>
